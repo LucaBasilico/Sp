@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" ng-app='myApp'>
+  <head>
+    <meta charset="utf-8">
+    <title>demoRest - Frontend Angular</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-spring-data-rest/dist/angular-spring-data-rest.min.js"></script>
+    <script src="/node_modules/angular-resource/angular-resource.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js"></script>
+  </head>
+  <body  ng-controller="myCtrl as ctrl">
+    <div class="container">
+      <div class="row">
+        <h1>{{title}}</h1>
+        <div class="showPerson" >
+          <h2>Lista delle persone già inserite</h2>
+          <p ng-repeat="person in people">Le persone si chiamano:{{person.firstName}},{{person.lastName}}</p>
+        </div>
+        <!-- <div class="deletePerson" >
+          <h2>Se vuoi eliminare una persona inserisci l'ID</h2>
+
+        </div> -->
+      </div>
+    </div>
+  </body>
+</html>
